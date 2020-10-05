@@ -86,11 +86,11 @@ export declare class OrbitControls extends THREE.EventDispatcher {
     private onKeyDown;
     constructor(object: THREE.Camera, domElement?: HTMLElement, domWindow?: Window);
     update(): boolean;
-    panLeft(distance: number, objectMatrix: any): void;
-    panUp(distance: number, objectMatrix: any): void;
+    panLeft(distance: number, objectMatrix: THREE.Matrix4): void;
+    panUp(distance: number, objectMatrix: THREE.Matrix4): void;
     pan(deltaX: number, deltaY: number): void;
-    dollyIn(dollyScale: any): void;
-    dollyOut(dollyScale: any): void;
+    dollyIn(dollyScale: number): void;
+    dollyOut(dollyScale: number): void;
     getAutoRotationAngle(): number;
     getZoomScale(): number;
     rotateLeft(angle: number): void;
