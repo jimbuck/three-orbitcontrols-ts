@@ -100,18 +100,19 @@ export declare class OrbitControls extends THREE.EventDispatcher {
     dispose(): void;
     reset(): void;
     saveState(): void;
-    readonly center: THREE.Vector3;
-    noZoom: boolean;
+    get center(): THREE.Vector3;
+    get noZoom(): boolean;
+    set noZoom(value: boolean);
     /**
      * TS typeguard. Checks whether the provided camera is PerspectiveCamera.
      * If the check passes (returns true) the passed camera will have the type THREE.PerspectiveCamera in the if branch where the check was performed.
      * @param camera Object to be checked.
      */
-    private _checkPerspectiveCamera(camera);
+    private _checkPerspectiveCamera;
     /**
      * TS typeguard. Checks whether the provided camera is OrthographicCamera.
      * If the check passes (returns true) the passed camera will have the type THREE.OrthographicCamera in the if branch where the check was performed.
      * @param camera Object to be checked.
      */
-    private _checkOrthographicCamera(camera);
+    private _checkOrthographicCamera;
 }
